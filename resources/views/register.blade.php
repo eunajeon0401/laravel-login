@@ -2,10 +2,11 @@
 @section('title', 'Register')
 @section('content')
   <div class="container">
-    <form class="ms-auto me-auto mt-auto" style="width: 500px">
+    <form action="{{ route('register.post') }}" method="POST" class="ms-auto me-auto mt-auto" style="width: 500px">
+    @csrf
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
-        <input type="email" class="form-control" name="name">
+        <input type="text" class="form-control" name="name">
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
